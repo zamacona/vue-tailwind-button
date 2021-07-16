@@ -2,18 +2,15 @@
   "name": "vue-tailwind-button",
   "version": "0.1.11",
   "description": "",
-
   "main": "dist/vue-tailwind-button.ssr.js",
   "browser": "dist/vue-tailwind-button.esm.js",
   "module": "dist/vue-tailwind-button.esm.js",
   "unpkg": "dist/vue-tailwind-button.min.js",
-
   "files": [
     "dist/*",
     "src/**/*.vue"
   ],
   "sideEffects": false,
-
   "scripts": {
     "serve": "vue-cli-service serve dev/serve.js",
     "build": "cross-env NODE_ENV=production rollup --config build/rollup.config.js",
@@ -21,10 +18,6 @@
     "build:es": "cross-env NODE_ENV=production rollup --config build/rollup.config.js --format es",
     "build:unpkg": "cross-env NODE_ENV=production rollup --config build/rollup.config.js --format iife"
   },
-
-  "dependencies": {
-  },
-
   "devDependencies": {
     "@babel/core": "^7.12.10",
     "@babel/preset-env": "^7.12.11",
@@ -38,7 +31,6 @@
     "@vue/compiler-sfc": "^3.0.5",
     "cross-env": "^7.0.3",
     "minimist": "^1.2.5",
-    "postcss": "^8.2.3",
     "rollup": "^2.36.1",
     "rollup-plugin-postcss": "^4.0.0",
     "rollup-plugin-terser": "^7.0.2",
@@ -50,5 +42,10 @@
   },
   "engines": {
     "node": ">=12"
+  },
+  "dependencies": {
+    "autoprefixer": "^9.8.6",
+    "postcss": "^7.0.36",
+    "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.2.4"
   }
 }
