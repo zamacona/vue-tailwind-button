@@ -11,7 +11,7 @@ export default defineComponent({
 </script>
 
 <template>
-  <div id="app" class="mt-10 mx-28">
+  <div class="my-10 mx-28">
     <p class="mt-6 text-center">SOLID</p>
     <div class="grid justify-items-center grid-cols-10 mt-5">
       <vue-tailwind-button color="black"> black </vue-tailwind-button>
@@ -49,6 +49,19 @@ export default defineComponent({
       <vue-tailwind-button rounded color="purple"> purple </vue-tailwind-button>
       <vue-tailwind-button rounded color="pink"> pink </vue-tailwind-button>
     </div>
+
+    <div class="grid justify-items-center grid-cols-10 mt-5">
+      <vue-tailwind-button disabled rounded color="black"> black </vue-tailwind-button>
+      <vue-tailwind-button disabled rounded color="white"> white </vue-tailwind-button>
+      <vue-tailwind-button disabled rounded color="gray"> gray </vue-tailwind-button>
+      <vue-tailwind-button disabled rounded color="red"> red </vue-tailwind-button>
+      <vue-tailwind-button disabled rounded color="yellow"> yellow </vue-tailwind-button>
+      <vue-tailwind-button disabled rounded color="green"> green </vue-tailwind-button>
+      <vue-tailwind-button disabled rounded color="blue"> blue </vue-tailwind-button>
+      <vue-tailwind-button disabled rounded color="indigo"> indigo </vue-tailwind-button>
+      <vue-tailwind-button disabled rounded color="purple"> purple </vue-tailwind-button>
+      <vue-tailwind-button disabled rounded color="pink"> pink </vue-tailwind-button>
+    </div>
     <p class="mt-6 text-center">OUTLINE</p>
     <div class="grid justify-items-center grid-cols-10 mt-5">
       <vue-tailwind-button mode="outline" color="black"> black </vue-tailwind-button>
@@ -63,6 +76,18 @@ export default defineComponent({
       <vue-tailwind-button mode="outline" color="pink"> pink </vue-tailwind-button>
     </div>
     <div class="grid justify-items-center grid-cols-10 mt-5">
+      <vue-tailwind-button disabled mode="outline" color="black"> black </vue-tailwind-button>
+      <vue-tailwind-button disabled mode="outline" color="white"> white </vue-tailwind-button>
+      <vue-tailwind-button disabled mode="outline" color="gray"> gray </vue-tailwind-button>
+      <vue-tailwind-button disabled mode="outline" color="red"> red </vue-tailwind-button>
+      <vue-tailwind-button disabled mode="outline" color="yellow"> yellow </vue-tailwind-button>
+      <vue-tailwind-button disabled mode="outline" color="green"> green </vue-tailwind-button>
+      <vue-tailwind-button disabled mode="outline" color="blue"> blue </vue-tailwind-button>
+      <vue-tailwind-button disabled mode="outline" color="indigo"> indigo </vue-tailwind-button>
+      <vue-tailwind-button disabled mode="outline" color="purple"> purple </vue-tailwind-button>
+      <vue-tailwind-button disabled mode="outline" color="pink"> pink </vue-tailwind-button>
+    </div>
+    <div class="grid justify-items-center grid-cols-10 mt-5">
       <vue-tailwind-button rounded mode="outline" color="black"> black </vue-tailwind-button>
       <vue-tailwind-button rounded mode="outline" color="white"> white </vue-tailwind-button>
       <vue-tailwind-button rounded mode="outline" color="gray"> gray </vue-tailwind-button>
@@ -73,6 +98,18 @@ export default defineComponent({
       <vue-tailwind-button rounded mode="outline" color="indigo"> indigo </vue-tailwind-button>
       <vue-tailwind-button rounded mode="outline" color="purple"> purple </vue-tailwind-button>
       <vue-tailwind-button rounded mode="outline" color="pink"> pink </vue-tailwind-button>
+    </div>
+    <div class="grid justify-items-center grid-cols-10 mt-5">
+      <vue-tailwind-button disabled rounded mode="outline" color="black"> black </vue-tailwind-button>
+      <vue-tailwind-button disabled rounded mode="outline" color="white"> white </vue-tailwind-button>
+      <vue-tailwind-button disabled rounded mode="outline" color="gray"> gray </vue-tailwind-button>
+      <vue-tailwind-button disabled rounded mode="outline" color="red"> red </vue-tailwind-button>
+      <vue-tailwind-button disabled rounded mode="outline" color="yellow"> yellow </vue-tailwind-button>
+      <vue-tailwind-button disabled rounded mode="outline" color="green"> green </vue-tailwind-button>
+      <vue-tailwind-button disabled rounded mode="outline" color="blue"> blue </vue-tailwind-button>
+      <vue-tailwind-button disabled rounded mode="outline" color="indigo"> indigo </vue-tailwind-button>
+      <vue-tailwind-button disabled rounded mode="outline" color="purple"> purple </vue-tailwind-button>
+      <vue-tailwind-button disabled rounded mode="outline" color="pink"> pink </vue-tailwind-button>
     </div>
     <p class="mt-6 text-center">FLAT</p>
     <div class="grid justify-items-center grid-cols-10 mt-5">
@@ -88,6 +125,18 @@ export default defineComponent({
       <vue-tailwind-button mode="flat" color="pink"> pink </vue-tailwind-button>
     </div>
     <div class="grid justify-items-center grid-cols-10 mt-5">
+      <vue-tailwind-button disabled mode="flat" color="black"> black </vue-tailwind-button>
+      <vue-tailwind-button disabled mode="flat" color="white"> white </vue-tailwind-button>
+      <vue-tailwind-button disabled mode="flat" color="gray"> gray </vue-tailwind-button>
+      <vue-tailwind-button disabled mode="flat" color="red"> red </vue-tailwind-button>
+      <vue-tailwind-button disabled mode="flat" color="yellow"> yellow </vue-tailwind-button>
+      <vue-tailwind-button disabled mode="flat" color="green"> green </vue-tailwind-button>
+      <vue-tailwind-button disabled mode="flat" color="blue"> blue </vue-tailwind-button>
+      <vue-tailwind-button disabled mode="flat" color="indigo"> indigo </vue-tailwind-button>
+      <vue-tailwind-button disabled mode="flat" color="purple"> purple </vue-tailwind-button>
+      <vue-tailwind-button disabled mode="flat" color="pink"> pink </vue-tailwind-button>
+    </div>
+    <div class="grid justify-items-center grid-cols-10 mt-5">
       <vue-tailwind-button mode="flat" rounded color="black"> black </vue-tailwind-button>
       <vue-tailwind-button mode="flat" rounded color="white"> white </vue-tailwind-button>
       <vue-tailwind-button mode="flat" rounded color="gray"> gray </vue-tailwind-button>
@@ -98,6 +147,18 @@ export default defineComponent({
       <vue-tailwind-button mode="flat" rounded color="indigo"> indigo </vue-tailwind-button>
       <vue-tailwind-button mode="flat" rounded color="purple"> purple </vue-tailwind-button>
       <vue-tailwind-button mode="flat" rounded color="pink"> pink </vue-tailwind-button>
+    </div>
+    <div class="grid justify-items-center grid-cols-10 mt-5">
+      <vue-tailwind-button disabled mode="flat" rounded color="black"> black </vue-tailwind-button>
+      <vue-tailwind-button disabled mode="flat" rounded color="white"> white </vue-tailwind-button>
+      <vue-tailwind-button disabled mode="flat" rounded color="gray"> gray </vue-tailwind-button>
+      <vue-tailwind-button disabled mode="flat" rounded color="red"> red </vue-tailwind-button>
+      <vue-tailwind-button disabled mode="flat" rounded color="yellow"> yellow </vue-tailwind-button>
+      <vue-tailwind-button disabled mode="flat" rounded color="green"> green </vue-tailwind-button>
+      <vue-tailwind-button disabled mode="flat" rounded color="blue"> blue </vue-tailwind-button>
+      <vue-tailwind-button disabled mode="flat" rounded color="indigo"> indigo </vue-tailwind-button>
+      <vue-tailwind-button disabled mode="flat" rounded color="purple"> purple </vue-tailwind-button>
+      <vue-tailwind-button disabled mode="flat" rounded color="pink"> pink </vue-tailwind-button>
     </div>
   </div>
 </template>

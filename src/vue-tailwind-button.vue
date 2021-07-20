@@ -36,7 +36,7 @@ export default /*#__PURE__*/ defineComponent({
   data() {
     return {
       css: null,
-      disabled: false,
+      isDisabled: this.disabled, //check the disabled tailwind config: https://tailwindcss.com/docs/hover-focus-and-other-states#disabled
       colors: {
         black: {
           bg: this.mode == "solid" ? "bg-black" : this.mode == "outline" || this.mode == "flat" ? "bg-white" : "",
@@ -125,13 +125,13 @@ export default /*#__PURE__*/ defineComponent({
   mounted() {
     switch (this.mode) {
       case "outline":
-        this.css = `focus:${this.colors[this.color].ring} ${this.colors[this.color].border} ${this.colors[this.color].bg} ${this.colors[this.color].text} hover:${this.colors[this.color].bgHover} hover:${this.colors[this.color].textHover} border focus:outline-none focus:ring-4 py-1 px-2 rounded font-medium mx-3 transition duration-200 each-in-out`;
+        this.css = `disabled:opacity-50 focus:${this.colors[this.color].ring} ${this.colors[this.color].border} ${this.colors[this.color].bg} ${this.colors[this.color].text} hover:${this.colors[this.color].bgHover} hover:${this.colors[this.color].textHover} border focus:outline-none focus:ring-4 py-1 px-2 rounded font-medium mx-3 transition duration-200 each-in-out`;
         break;
       case "flat":
-        this.css = `focus:${this.colors[this.color].ring} ${this.colors[this.color].border} ${this.colors[this.color].bg} ${this.colors[this.color].text} hover:${this.colors[this.color].bgHover} hover:${this.colors[this.color].textHover} focus:outline-none focus:ring-4 py-1 px-2 rounded font-medium mx-3 transition duration-200 each-in-out`;
+        this.css = `disabled:opacity-50 focus:${this.colors[this.color].ring} ${this.colors[this.color].border} ${this.colors[this.color].bg} ${this.colors[this.color].text} hover:${this.colors[this.color].bgHover} hover:${this.colors[this.color].textHover} focus:outline-none focus:ring-4 py-1 px-2 rounded font-medium mx-3 transition duration-200 each-in-out`;
         break;
       case "solid":
-        this.css = `focus:${this.colors[this.color].ring} ${this.colors[this.color].border} ${this.colors[this.color].bg} ${this.colors[this.color].text} hover:${this.colors[this.color].bgHover} hover:${this.colors[this.color].textHover} border focus:outline-none focus:ring-4 py-1 px-2 rounded font-medium mx-3 transition duration-200 each-in-out`;
+        this.css = `disabled:opacity-50 focus:${this.colors[this.color].ring} ${this.colors[this.color].border} ${this.colors[this.color].bg} ${this.colors[this.color].text} hover:${this.colors[this.color].bgHover} hover:${this.colors[this.color].textHover} border focus:outline-none focus:ring-4 py-1 px-2 rounded font-medium mx-3 transition duration-200 each-in-out`;
         break;
     }
 
@@ -141,7 +141,7 @@ export default /*#__PURE__*/ defineComponent({
 </script>
 
 <template>
-  <button :disabled="disabled" :type="type" :class="css">
+  <button :disabled="isDisabled" :type="type" :class="css">
     <slot></slot>
   </button>
 </template>
