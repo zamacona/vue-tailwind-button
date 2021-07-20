@@ -14,7 +14,7 @@ export default defineComponent({
   <div class="my-10 mx-28">
     <p class="mt-6 text-center">SOLID</p>
     <div class="grid justify-items-center grid-cols-10 mt-5">
-      <vue-tailwind-button color="black"> black </vue-tailwind-button>
+      <vue-tailwind-button href="http://lvh.me:8000/" target="_blank" color="black"> black </vue-tailwind-button>
       <vue-tailwind-button color="white"> white </vue-tailwind-button>
       <vue-tailwind-button color="gray"> gray </vue-tailwind-button>
       <vue-tailwind-button color="red"> red </vue-tailwind-button>

@@ -4,6 +4,14 @@ import { defineComponent } from "vue";
 export default /*#__PURE__*/ defineComponent({
   name: "VueTailwindButton", // vue component name
   props: {
+    href: {
+      type: String,
+      default: "",
+    },
+    target: {
+      type: String,
+      default: "_self"
+    },
     type: {
       type: String,
       default: "submit",
@@ -15,14 +23,6 @@ export default /*#__PURE__*/ defineComponent({
     color: {
       type: String,
       default: "blue",
-    },
-    textColor: {
-      type: String,
-      default: null,
-    },
-    hoverTextColor: {
-      type: String,
-      default: null,
     },
     rounded:{
       type: Boolean,
@@ -137,11 +137,16 @@ export default /*#__PURE__*/ defineComponent({
 
     if(this.rounded) this.css += " rounded-full";
   },
+  methods:{
+    click(){
+      window.open(this.href, this.target);
+    }
+  }
 });
 </script>
 
 <template>
-  <button :disabled="isDisabled" :type="type" :class="css">
+  <button @click="click()" :disabled="isDisabled" :type="type" :class="css">
     <slot></slot>
   </button>
 </template>
