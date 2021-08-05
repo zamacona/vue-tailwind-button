@@ -4,14 +4,6 @@ import { defineComponent } from "vue";
 export default /*#__PURE__*/ defineComponent({
   name: "VueTailwindButton", // vue component name
   props: {
-    href: {
-      type: String,
-      default: "",
-    },
-    target: {
-      type: String,
-      default: "_self"
-    },
     type: {
       type: String,
       default: "submit",
@@ -28,10 +20,6 @@ export default /*#__PURE__*/ defineComponent({
       type: Boolean,
       default: false
     },
-    disabled:{
-      type: Boolean,
-      default: false
-    }
   },
   data() {
     return {
@@ -125,28 +113,23 @@ export default /*#__PURE__*/ defineComponent({
   mounted() {
     switch (this.mode) {
       case "outline":
-        this.css = `disabled:opacity-50 focus:${this.colors[this.color].ring} ${this.colors[this.color].border} ${this.colors[this.color].bg} ${this.colors[this.color].text} hover:${this.colors[this.color].bgHover} hover:${this.colors[this.color].textHover} border focus:outline-none focus:ring-4 py-1 px-2 rounded font-medium mx-3 transition duration-200 each-in-out`;
+        this.css = `inline-flex items-center disabled:opacity-50 focus:${this.colors[this.color].ring} ${this.colors[this.color].border} ${this.colors[this.color].bg} ${this.colors[this.color].text} hover:${this.colors[this.color].bgHover} hover:${this.colors[this.color].textHover} border focus:outline-none focus:ring-4 py-2 px-4 font-semibold text-xs tracking-widest rounded font-medium transition duration-200 each-in-out`;
         break;
       case "flat":
-        this.css = `disabled:opacity-50 focus:${this.colors[this.color].ring} ${this.colors[this.color].border} ${this.colors[this.color].bg} ${this.colors[this.color].text} hover:${this.colors[this.color].bgHover} hover:${this.colors[this.color].textHover} focus:outline-none focus:ring-4 py-1 px-2 rounded font-medium mx-3 transition duration-200 each-in-out`;
+        this.css = `inline-flex items-center disabled:opacity-50 focus:${this.colors[this.color].ring} ${this.colors[this.color].border} ${this.colors[this.color].bg} ${this.colors[this.color].text} hover:${this.colors[this.color].bgHover} hover:${this.colors[this.color].textHover} focus:outline-none focus:ring-4 py-2 px-4 font-semibold rounded text-xs tracking-widest font-medium transition duration-200 each-in-out`;
         break;
       case "solid":
-        this.css = `disabled:opacity-50 focus:${this.colors[this.color].ring} ${this.colors[this.color].border} ${this.colors[this.color].bg} ${this.colors[this.color].text} hover:${this.colors[this.color].bgHover} hover:${this.colors[this.color].textHover} border focus:outline-none focus:ring-4 py-1 px-2 rounded font-medium mx-3 transition duration-200 each-in-out`;
+        this.css = `inline-flex items-center disabled:opacity-50 focus:${this.colors[this.color].ring} ${this.colors[this.color].border} ${this.colors[this.color].bg} ${this.colors[this.color].text} hover:${this.colors[this.color].bgHover} hover:${this.colors[this.color].textHover} border focus:outline-none focus:ring-4 py-2 px-4 font-semibold text-xs tracking-widest rounded font-medium transition duration-200 each-in-out`;
         break;
     }
 
     if(this.rounded) this.css += " rounded-full";
   },
-  methods:{
-    click(){
-      window.open(this.href, this.target);
-    }
-  }
 });
 </script>
 
 <template>
-  <button @click="click()" :disabled="isDisabled" :type="type" :class="css">
+  <button :type="type" :class="css">
     <slot></slot>
   </button>
 </template>
