@@ -1,6 +1,6 @@
 {
   "name": "vue-tailwind-button",
-  "version": "0.1.16",
+  "version": "0.1.17",
   "description": "",
   "main": "dist/vue-tailwind-button.ssr.js",
   "browser": "dist/vue-tailwind-button.esm.js",

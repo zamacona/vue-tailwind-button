@@ -23,8 +23,8 @@ export default /*#__PURE__*/ defineComponent({
   },
   data() {
     return {
+      //check the disabled tailwind config: https://tailwindcss.com/docs/hover-focus-and-other-states#disabled
       css: null,
-      isDisabled: this.disabled, //check the disabled tailwind config: https://tailwindcss.com/docs/hover-focus-and-other-states#disabled
       colors: {
         black: {
           bg: this.mode == "solid" ? "bg-black" : this.mode == "outline" || this.mode == "flat" ? "bg-white" : "",
