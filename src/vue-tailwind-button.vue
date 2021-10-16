@@ -24,6 +24,10 @@ export default /*#__PURE__*/ defineComponent({
       type: Boolean,
       default: false
     },
+    height:{
+      type: String,
+      default: "h-8"
+    }
   },
   data() {
     return {
@@ -117,17 +121,19 @@ export default /*#__PURE__*/ defineComponent({
   mounted() {
     switch (this.mode) {
       case "outline":
-        this.css = `flex justify-center disabled:opacity-50 focus:${this.colors[this.color].ring} ${this.colors[this.color].border} ${this.colors[this.color].bg} ${this.colors[this.color].text} hover:${this.colors[this.color].bgHover} hover:${this.colors[this.color].textHover} border focus:outline-none focus:ring-4 py-2 px-4 font-semibold text-xs tracking-widest rounded font-medium transition duration-200 each-in-out`;
+        this.css = `flex justify-center disabled:opacity-50 focus:${this.colors[this.color].ring} ${this.colors[this.color].border} ${this.colors[this.color].bg} ${this.colors[this.color].text} hover:${this.colors[this.color].bgHover} hover:${this.colors[this.color].textHover} ${this.height} border focus:outline-none focus:ring-4 py-2 px-4 font-semibold text-xs tracking-widest rounded font-medium transition duration-200 each-in-out`;
         break;
       case "flat":
-        this.css = `flex justify-center disabled:opacity-50 focus:${this.colors[this.color].ring} ${this.colors[this.color].border} ${this.colors[this.color].bg} ${this.colors[this.color].text} hover:${this.colors[this.color].bgHover} hover:${this.colors[this.color].textHover} focus:outline-none focus:ring-4 py-2 px-4 font-semibold rounded text-xs tracking-widest font-medium transition duration-200 each-in-out`;
+        this.css = `flex justify-center disabled:opacity-50 focus:${this.colors[this.color].ring} ${this.colors[this.color].border} ${this.colors[this.color].bg} ${this.colors[this.color].text} hover:${this.colors[this.color].bgHover} hover:${this.colors[this.color].textHover} ${this.height} focus:outline-none focus:ring-4 py-2 px-4 font-semibold rounded text-xs tracking-widest font-medium transition duration-200 each-in-out`;
         break;
       case "solid":
-        this.css = `flex justify-center disabled:opacity-50 focus:${this.colors[this.color].ring} ${this.colors[this.color].border} ${this.colors[this.color].bg} ${this.colors[this.color].text} hover:${this.colors[this.color].bgHover} hover:${this.colors[this.color].textHover} border focus:outline-none focus:ring-4 py-2 px-4 font-semibold text-xs tracking-widest rounded font-medium transition duration-200 each-in-out`;
+        this.css = `flex justify-center disabled:opacity-50 focus:${this.colors[this.color].ring} ${this.colors[this.color].border} ${this.colors[this.color].bg} ${this.colors[this.color].text} hover:${this.colors[this.color].bgHover} hover:${this.colors[this.color].textHover} ${this.height} border focus:outline-none focus:ring-4 py-2 px-4 font-semibold text-xs tracking-widest rounded font-medium transition duration-200 each-in-out`;
         break;
     }
 
     if(this.rounded) this.css += " rounded-full";
+
+    if(this.block) this.css += " w-full";
 
     if(this.block) this.css += " w-full";
   },
